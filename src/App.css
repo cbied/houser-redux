@@ -1,33 +1,86 @@
-.App {
-  text-align: center;
+/* Header component */
+.Header {
+	display: flex;
+	align-items: center;
+	background: #519872;
+	color: white;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.Header img {
+	margin: 0 1% 0 5%;
+	height: 6vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Header .title {
+	margin-right: 5vw;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Wizard */
+
+.container {
+	background-color: #E5F4EC;
+	width: 130vh;
+	height: 100%;
+	/* display: flex;
+	align-items: center;
+	flex-direction: column; */
+	margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wizardHeader {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
 }
+
+.insideContainer {
+	
+	width: 100vh;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.address, .image_url, .monthly {
+	display: flex;
+	flex-direction: column;
+}
+
+.cityStateZip {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wizardLink {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2rem;
+}
+
+.wizardPrvNext {
+	display: flex;
+	justify-content: space-between;
+	margin: 3rem;
+}
+
+.nextBtn, .prevBtn {
+	background: #3B5249;
+	font-weight: bold;
+	border-radius: 15px;
+	height: 8vh;
+	width: 12vw;
+}
+
+.nextStep, .prevStep {
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+.cancelBtn {
+	background: #FEC2C2;
+	font-weight: bold;
+	border-radius: 15px;
+	height: 6vh;
+	width: 7vw;
+}
+
