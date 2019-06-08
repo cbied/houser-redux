@@ -82,7 +82,7 @@ export class WizardThree extends Component {
                     </h3>
                 </div>
                 <div className="insideContainer center">
-                    <h4>recommended Rent: {recommendedRent}</h4>
+                    <h4>Recommended Rent: {recommendedRent}</h4>
                 </div>
                 <div className="insideContainer">
                     <div className="monthly">
