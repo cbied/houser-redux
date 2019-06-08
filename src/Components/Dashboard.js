@@ -16,7 +16,7 @@ class Dashboard extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.getAllHouses();
-        }, 1000)
+        }, 1500)
             
         
         
@@ -38,22 +38,29 @@ class Dashboard extends Component {
         const { houses } = this.state,
             displayHouses = houses.map(house => {
             return (
-                <li key={house.id}>
+                <div key={house.id}>
                     <House 
                     house={house}
                     deleteOneHouseFn={this.deleteOneHouse}
                     />
-                </li>
+                </div>
             )
         })
         return (
-            <div>
-                <h1>Dashboard</h1>
-                <Link to="/wizard/step1">
-                    <button>Add New Property</button>
-                </Link>
-                <h2>Listings</h2>
-                <ul>{displayHouses}</ul>
+            <div className="container">
+                <div className="dashboardHeader">
+                    <h1>Dashboard</h1>
+                    <Link to="/wizard/step1">
+                    <button className="addNewProp">
+                    
+                        Add New Property
+                    </button>
+                    </Link> 
+                </div>
+                <h2>Property Listings</h2>
+                
+                    {displayHouses}
+               
             </div>
         )
     }

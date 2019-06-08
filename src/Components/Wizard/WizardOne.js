@@ -99,11 +99,14 @@ export class Wizard extends Component {
                 </div>
                 </div>
                 <div className="wizardLink">
-                    <button className="nextBtn">
-                    <Link to="/wizard/step2" className="nextStep"
+                    
+                    <Link to="/wizard/step2" 
                     onClick={() => this.amendStore()}
-                    >Next Step</Link>
-                    </button>
+                    >
+                        <button className="nextBtn">
+                            Next Step
+                        </button>
+                    </Link>
                 </div>
                 
             </div>

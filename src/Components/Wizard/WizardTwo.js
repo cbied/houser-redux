@@ -53,14 +53,19 @@ export class WizardTwo extends Component {
                         />
                     </div>
                     <div className="wizardPrvNext">
-                        <button className="prevBtn">
-                            <Link to="/wizard/step1" className="prevStep">Previous Step</Link>
-                        </button>
-                        <button className="nextBtn">
-                            <Link to="/wizard/step3" className="nextStep"
-                            onClick={() => this.amendStore()}
-                            >Next Step</Link>
-                        </button>
+                        <Link to="/wizard/step1">
+                            <button className="prevBtn">
+                                Previous Step
+                            </button>
+                        </Link>
+                        
+                        <Link to="/wizard/step3"
+                        onClick={() => this.amendStore()}
+                        >
+                            <button className="nextBtn">
+                                Next Step
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

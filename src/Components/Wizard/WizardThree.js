@@ -86,14 +86,19 @@ export class WizardThree extends Component {
                     </div>
 
                     <div className="wizardPrvNext">
-                            <button className="prevBtn">
-                                <Link to="/wizard/step2" className="prevStep">Previous Step</Link>
-                            </button>
-                            <button className="nextBtn">
-                                <Link to="/" className="nextStep"
+                            <Link to="/wizard/step2">
+                                <button className="prevBtn">
+                                    Previous Step
+                                </button>
+                            </Link>
+                            <Link to="/" 
                                 onClick={() => this.addOneHouse()}
-                                >Complete</Link>
-                            </button>
+                                >
+                                <button className="nextBtn">
+                                    Complete
+                                </button>
+                            </Link>
+                            
                         </div>
                 </div>
             </div>

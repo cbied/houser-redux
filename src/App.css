@@ -16,15 +16,78 @@
 }
 
 
-/* Wizard */
+/* Dashboard component */
+
+.dashboardHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	width: 60vw;
+	padding: 2rem;
+	border-bottom: 1px black solid;
+}
+
+.addNewProp {
+	background: #8AEA92;
+	height: 4rem;
+	width: 12rem;
+	border-radius: 15px;
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+.container h2 {
+	margin-left: 3rem;
+}
+
+
+
+/* House component */
+
+.propertiesList {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	width: 80%;
+	background: #DEDEDE;
+}
+
+.propertiesList button {
+	align-self: flex-start;
+	margin-top: 1rem;
+	margin-left: 2rem;
+}
+
+.propertiesList ul li {
+	margin-bottom: .5rem;
+}
+
+.propertiesList ul li img {
+	width: 200px;
+	height: 200px;
+}
+
+.propertiesList button, .propertiesList li {
+	list-style-type: none;
+}
+
+.deleteBtn {
+	background: #FEC2C2;
+	font-weight: bold;
+	border-radius: 15px;
+	height: 6vh;
+	width: 3vw;
+}
+
+/* Wizard components */
 
 .container {
 	background-color: #E5F4EC;
-	width: 130vh;
+	width: 160vh;
 	height: 100%;
-	/* display: flex;
-	align-items: center;
-	flex-direction: column; */
 	margin: 0 auto;
 }
 
@@ -69,9 +132,6 @@
 	border-radius: 15px;
 	height: 8vh;
 	width: 12vw;
-}
-
-.nextStep, .prevStep {
 	color: whitesmoke;
 	text-decoration: none;
 }
