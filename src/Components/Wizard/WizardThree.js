@@ -10,7 +10,8 @@ export class WizardThree extends Component {
         super(props)
         this.state = {
             mortgage: store.getState().mortgage,
-            rent: store.getState().rent
+            rent: store.getState().rent,
+            recommendedRent: store.getState().mortgage
         }
     }
 
@@ -23,8 +24,13 @@ export class WizardThree extends Component {
         })
     }
 
-    handleChange = e => {
+    handleRentChange = e => {
         this.setState({ [e.target.name]: e.target.value })
+    }
+
+    handleMortgageChange = e => {
+        this.setState({ [e.target.name]: e.target.value })
+        this.setState({ recommendedRent: e.target.value * 1.25}) 
     }
 
     amendStore = () => {
@@ -36,6 +42,10 @@ export class WizardThree extends Component {
     cancelListing = () => {
         store.dispatch({ type: CANCEL_LISTING })
     }
+
+    // handleMortgageChange = e => {
+    //     this.setState({ recommendedRent: e.target.value * 1.25,})   
+    // }
 
     addOneHouse = () => {
         const { name, address, city, state, zipcode, image_url } = store.getState(),
@@ -58,7 +68,7 @@ export class WizardThree extends Component {
     }
 
     render() {
-        const { mortgage, rent } = this.state
+        const { mortgage, rent, recommendedRent } = this.state
         return (
             <div className="container">
                  <div className="wizardHeader">
@@ -71,17 +81,20 @@ export class WizardThree extends Component {
                         </Link>
                     </h3>
                 </div>
+                <div className="insideContainer center">
+                    <h4>recommended Rent: {recommendedRent}</h4>
+                </div>
                 <div className="insideContainer">
                     <div className="monthly">
                         <h4>Monthly Mortgage Amount</h4>
                         <input type="number" name="mortgage" value={mortgage}
-                        onChange={e => this.handleChange(e)}
+                        onChange={e => this.handleMortgageChange(e)}
                         />
                     </div>
                     <div className="monthly">
                         <h4>Desired Monthly Rent</h4>
                         <input type="number" name="rent" value={rent}
-                        onChange={e => this.handleChange(e)}
+                        onChange={e => this.handleRentChange(e)}
                         />
                     </div>
 
